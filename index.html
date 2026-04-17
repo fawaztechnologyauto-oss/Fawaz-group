@@ -22,7 +22,25 @@ header h1 {
     margin: 0;
     font-size: 32px;
 }
+    
+.navbar {
+    background: #1e293b;
+    padding: 15px;
+    text-align: center;
+}
 
+.navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+    
 .section {
     padding: 50px 20px;
     text-align: center;
@@ -89,10 +107,16 @@ footer {
 
 <header>
     <h1>FAWAZ GROUP</h1>
-    <p>Bendungan Mart & Fawaz Teknik</p>
+    <p>Solusi untuk Kebutuhan Anda</p>
 </header>
+<nav class="navbar">
+    <a href="#bendungan">Bendungan Mart</a>
+    <a href="#teknik">Fawaz Teknik</a>
+    <a href="#ayamkarage">Ayam Karage Mas Fawaz</a>
+    <a href="#kontak">Kontak</a>
+</nav>
 
-<section class="section">
+<section class="section" id="bendungan">
     <h2>Portofolio Bendungan Mart</h2>
     <div class="gallery">
         <div class="card">
@@ -106,7 +130,7 @@ footer {
     </div>
 </section>
 
-<section class="section">
+<section class="section" id="teknik">
     <h2>Portofolio Fawaz Teknik</h2>
     <div class="gallery">
         <div class="card">
@@ -120,7 +144,7 @@ footer {
     </div>
 </section>
 
-<div class="whatsapp">
+<div class="whatsapp" id="kontak">
     <a href="https://wa.me/6289609065085" target="_blank">
         Hubungi Kami via WhatsApp
     </a>
