@@ -187,27 +187,6 @@ footer {
 }
 </style>
 </head>
-<script>
-document.querySelectorAll('.gallery').forEach(function(gallery){
-
-    const slides = gallery.querySelectorAll('.card');
-    let index = 0;
-
-    setInterval(function(){
-
-        slides[index].classList.remove('active');
-
-        index++;
-        if(index >= slides.length){
-            index = 0;
-        }
-
-        slides[index].classList.add('active');
-
-    }, 5000);
-
-});
-</script>
 <body>
 
 <header>
@@ -322,5 +301,27 @@ Tim kami siap melayani dengan respon cepat dan solusi terbaik.
     © 2026 Fawaz Group - All Rights Reserved
 </footer>
 
+
+<script>
+document.querySelectorAll('.gallery').forEach(function(gallery){
+
+    const slides = gallery.querySelectorAll('.card');
+    let index = 0;
+
+    setInterval(function(){
+
+        slides[index].classList.remove('active');
+
+        index++;
+        if(index >= slides.length){
+            index = 0;
+        }
+
+        slides[index].classList.add('active');
+
+    }, 5000);
+
+});
+</script>
 </body>
 </html>
