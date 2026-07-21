@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz Logika Berpikir | Fawaz Group</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f6f9;
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+header h1{
+    margin:0;
+}
+
+.navbar{
+    background:#1e293b;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    padding:15px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.navbar a:hover{
+    color:#38bdf8;
+}
+
+.container{
+
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+
+}
+
+.card{
+
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    padding:30px;
+
+}
+
+h2{
+
+    text-align:center;
+    color:#0f172a;
+
+}
+
+.info{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin:30px 0;
+
+}
+
+.box{
+
+    background:#f8fafc;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+
+}
+
+.box h3{
+
+    margin:0;
+    color:#2563eb;
+
+}
+
+.box p{
+
+    margin-top:10px;
+
+}
+
+button{
+
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:18px 40px;
+    font-size:18px;
+    cursor:pointer;
+    display:block;
+    margin:auto;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+#quiz{
+
+    display:none;
+    margin-top:40px;
+
+}
+
+iframe{
+
+    width:100%;
+    height:1800px;
+    border:none;
+
+}
+
+footer{
+
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🧠 Quiz Logika Berpikir</h1>
+
+<p>Uji kemampuan berpikir logis Anda</p>
+
+</header>
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+
+<a href="index.html#bendungan">Bendungan Mart</a>
+
+<a href="index.html#teknik">Fawaz Teknik</a>
+
+<a href="index.html#ayamkarage">Ayam Karage</a>
+
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Quiz Logika Berpikir</h2>
+
+<p style="text-align:center">
+
+Selamat datang di Quiz Logika Berpikir Fawaz Group.
+
+Quiz ini dirancang untuk menguji kemampuan analisis, penalaran, dan pemecahan masalah.
+
+Silakan isi identitas dengan benar sebelum mengerjakan soal.
+
+</p>
+
+<div class="info">
+
+<div class="box">
+<h3>📋</h3>
+<p>Pilihan Ganda</p>
+</div>
+
+<div class="box">
+<h3>🧠</h3>
+<p>Melatih Logika</p>
+</div>
+
+<div class="box">
+<h3>💯</h3>
+<p>Gratis</p>
+</div>
+
+<div class="box">
+<h3>📊</h3>
+<p>Nilai Otomatis</p>
+</div>
+
+</div>
+
+<button onclick="mulaiQuiz()">
+
+🚀 MULAI QUIZ
+
+</button>
+
+<div id="quiz">
+
+<iframe
+src="https://docs.google.com/forms/d/e/1FAIpQLSe3qQK4I2QBtGlB50aCRsaWQcO0ODtdInewJexa3fj9W56G-w/viewform?embedded=true">
+Loading…
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Fawaz Group
+
+</footer>
+
+<script>
+
+function mulaiQuiz(){
+
+document.getElementById("quiz").style.display="block";
+
+window.scrollTo({
+
+top:document.getElementById("quiz").offsetTop-20,
+
+behavior:"smooth"
+
+});
+
+event.target.style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
