@@ -62,24 +62,38 @@ header h1 {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1100px;
+    position: relative;
+    max-width: 700px;
     margin: auto;
+    overflow: hidden;
 }
 
 .card {
+    display: none;
     background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: fade 0.8s;
+}
+
+.card.active {
+    display: block;
 }
 
 .card img {
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .card p {
@@ -173,7 +187,27 @@ footer {
 }
 </style>
 </head>
+<script>
+document.querySelectorAll('.gallery').forEach(function(gallery){
 
+    const slides = gallery.querySelectorAll('.card');
+    let index = 0;
+
+    setInterval(function(){
+
+        slides[index].classList.remove('active');
+
+        index++;
+        if(index >= slides.length){
+            index = 0;
+        }
+
+        slides[index].classList.add('active');
+
+    }, 5000);
+
+});
+</script>
 <body>
 
 <header>
@@ -201,20 +235,22 @@ Bendungan Mart berfokus pada penyediaan kebutuhan harian dan material berkualita
 Kami terus berkembang dengan menghadirkan produk yang bermanfaat, harga terjangkau, dan pelayanan yang ramah.
 Beberapa produk kami adalah bahan material bangunan berupa Bata Ringan dan Batu Kuwung (untuk pondasi). Ada 3 Merk di toko kami : Citicon, Focon dan Amacon.
     </p>
-    <div class="gallery">
-        <div class="card">
-            <img src="bendunganmart1.webp" alt="Bendungan Mart">
-            <p>18 April 2026</p>
-        </div>
-        <div class="card">
-            <img src="bendunganmart2.webp" alt="Bendungan Mart">
-            <p>03 Maret 2026</p>
-        </div>
-        <div class="card">
-            <img src="bendunganmart3.webp" alt="Bendungan Mart">
-            <p>10 Maret 2026</p>
-        </div>
+<div class="gallery">
+    <div class="card active">
+        <img src="bendunganmart1.webp" alt="Bendungan Mart">
+        <p>18 April 2026</p>
     </div>
+
+    <div class="card">
+        <img src="bendunganmart2.webp" alt="Bendungan Mart">
+        <p>03 Maret 2026</p>
+    </div>
+
+    <div class="card">
+        <img src="bendunganmart3.webp" alt="Bendungan Mart">
+        <p>10 Maret 2026</p>
+    </div>
+</div>
 </section>
     
 <hr class="divider">
@@ -225,7 +261,7 @@ Fawaz Teknik bergerak di bidang jasa engineering, meliputi instalasi panel, sist
 Didukung pengalaman lapangan, kami siap memberikan solusi yang efektif, efisien, dan tepat sasaran.
     </p>
     <div class="gallery">
-        <div class="card">
+        <div class="card active">
             <img src="teknik1.webp" alt="Fawaz Teknik">
             <p>13 April 2026</p>
         </div>
@@ -249,7 +285,7 @@ Diproses dengan bahan pilihan dan standar kebersihan yang terjaga, cocok dinikma
 Menu kami juga tersedia di Grab food dan Shopeefood.
     </p>
     <div class="gallery">
-        <div class="card">
+        <div class="card active">
             <img src="karage1.webp" alt="Ayam Karage Mas Fawaz">
             <p>10 April 2026</p>
         </div>
